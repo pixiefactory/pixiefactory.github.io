@@ -1,0 +1,42 @@
+@font-face{font-family:"Luckiest Guy";src:url(/fonts/LuckiestGuy-Regular.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"Lilita One";src:url(/fonts/LilitaOne-Regular.ttf) format("truetype");font-display:swap}
+:root{--pink:#ff5fb4;--pink2:#ffd1ea;--purple:#7b3fe4;--deep:#2a1052;--ink:#2b2140;--bg:#fff6fc;--card:#fff;--r:20px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--purple)}img{max-width:100%;height:auto;display:block}
+h1,h2,h3,.brand{font-family:"Luckiest Guy","Lilita One",system-ui,sans-serif;letter-spacing:.5px;line-height:1.15;color:var(--deep)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header.top{background:var(--deep);position:sticky;top:0;z-index:5}
+header.top .wrap{display:flex;align-items:center;gap:10px;height:58px}
+.brand{color:#fff;text-decoration:none;font-size:22px;display:flex;align-items:center;gap:8px}
+.brand img{width:36px;height:36px;border-radius:50%}
+nav{margin-left:auto;display:flex;gap:14px}nav a{color:var(--pink2);text-decoration:none;font-weight:700;font-size:15px}
+.btn{display:inline-block;background:var(--pink);color:#fff;font-family:"Lilita One",system-ui,sans-serif;font-size:20px;padding:12px 24px;border-radius:999px;text-decoration:none;box-shadow:0 5px 0 #c93a88;transition:transform .1s}
+.btn:hover{transform:translateY(-2px)}.btn.alt{background:var(--purple);box-shadow:0 5px 0 #4f22a3}
+.hero{background:radial-gradient(circle at 70% 20%,#9b5cff 0,var(--purple) 40%,var(--deep) 100%);color:#fff;padding:36px 0 46px;text-align:center;overflow:hidden}
+.hero .wrap{display:flex;flex-direction:column;align-items:center;gap:14px}
+.hero img.pixie{width:200px;height:200px;border-radius:50%;border:6px solid var(--pink);background:#fff;animation:bob 3s ease-in-out infinite}
+.hero h1{color:#fff;font-size:clamp(34px,8vw,64px);margin:6px 0 0;text-shadow:0 4px 0 var(--pink)}
+.hero p{font-size:clamp(18px,4vw,24px);margin:0 0 8px;color:var(--pink2)}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-3deg)}}
+@media(prefers-reduced-motion:reduce){.hero img.pixie{animation:none}}
+section{padding:34px 0}h2{font-size:clamp(26px,5vw,38px);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 6px 18px rgba(80,30,140,.13);display:flex;flex-direction:column;transition:transform .15s}
+.card:hover{transform:translateY(-4px) rotate(-.5deg)}
+.card img{aspect-ratio:9/16;object-fit:cover;width:100%;max-height:340px}
+.card .meta{padding:10px 12px 14px}.card h3{font-size:18px;margin:4px 0 0;color:var(--deep)}
+.tag{display:inline-block;background:var(--pink2);color:#a0206a;font-weight:800;font-size:12px;padding:2px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.5px}
+.days{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.days li{background:#fff;border-radius:16px;padding:14px;border:3px solid var(--pink2);text-align:center}
+.days b{display:block;font-family:"Lilita One",system-ui;font-size:20px;color:var(--purple)}.days span{font-size:14px}
+article{max-width:720px;margin:0 auto}article h1{font-size:clamp(30px,6vw,46px);margin:18px 0 6px}
+.lede{font-size:20px;font-weight:600}
+.short{position:relative;max-width:340px;margin:20px auto;aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:var(--deep);box-shadow:0 10px 30px rgba(80,30,140,.3)}
+.short img,.short iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.short .ph{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(transparent,rgba(42,16,82,.92));color:#fff;text-align:center}
+.short .ph p{margin:0 0 10px;font-weight:700}
+.sources li{word-break:break-word}.box{background:#fff;border-radius:var(--r);padding:18px 20px;border:3px dashed var(--pink2);margin:24px 0}
+.cta{text-align:center;padding:28px 0}
+footer{background:var(--deep);color:var(--pink2);text-align:center;padding:26px 0;font-size:14px;margin-top:30px}footer a{color:#fff}
