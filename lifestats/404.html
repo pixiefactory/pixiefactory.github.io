@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#f3eee6" />
+    <meta name="description" content="A private record of firsts, growth, and the days in between. For a baby, a child, or yourself." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Keepsake" />
+    <link rel="icon" type="image/svg+xml" href="/lifestats/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/lifestats/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/lifestats/apple-touch-icon.png" />
+    <title>Keepsake</title>
+    <style>html{background:#f3eee6}html.dark{background:#14110e}</style>
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('keepsake-theme');
+          var dark = theme === 'dark' || ((theme === null || theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', dark ? '#14110e' : '#f3eee6');
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/lifestats/assets/index-ClG65CF2.js"></script>
+    <link rel="stylesheet" crossorigin href="/lifestats/assets/index-BKvo4BtI.css">
+  <link rel="manifest" href="/lifestats/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/lifestats/registerSW.js"></script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
